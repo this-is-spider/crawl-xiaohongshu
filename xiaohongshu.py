@@ -138,23 +138,23 @@ class searchXiaoHoneShu():
 
     def getProxy(self):
         params = {
-            'num' : 1,	
-            'pro' : '',	
-            'city' : 0,	
-            'regions' : '',	
-            'yys' : 0,	
-            'port' : 1,	
-            'type' : 2,
-            'ts' : 0,	
-            'ys' : 0,	
-            'cs' : 0,	
-            'lb' : 1,
-            'mr' : 1,
-            'pb' : 4,
-            'sb' : 1,
-            'time': 1	
+            # 'num' : 1,	
+            # 'pro' : '',	
+            # 'city' : 0,	
+            # 'regions' : '',	
+            # 'yys' : 0,	
+            # 'port' : 1,	
+            # 'type' : 2,
+            # 'ts' : 0,	
+            # 'ys' : 0,	
+            # 'cs' : 0,	
+            # 'lb' : 1,
+            # 'mr' : 1,
+            # 'pb' : 4,
+            # 'sb' : 1,
+            # 'time': 1	
         }
-        apiUrl = 'http://webapi.http.zhimacangku.com/getip'
+        apiUrl = ''
         r = requests.get(apiUrl, params=params)
         content = r.json()
         ip = content['data'][0]['ip']
@@ -175,7 +175,7 @@ class searchXiaoHoneShu():
 
         
 if __name__ == '__main__':
-    firstProxy = '1.199.193.9:4276'
+    firstProxy = ''
     main = searchXiaoHoneShu(proxy=firstProxy)
     main.getKeyword()
 
